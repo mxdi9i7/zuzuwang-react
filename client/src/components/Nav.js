@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+// import { Link } from 'react-router';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import '../App.css';
 
 class Nav extends Component {
@@ -27,3 +28,5 @@ class Nav extends Component {
         )
     }
 }
+
+export default Nav

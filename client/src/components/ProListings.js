@@ -36,3 +36,5 @@ class ProListings extends Component {
         )
     }
 }
+
+export default ProListings

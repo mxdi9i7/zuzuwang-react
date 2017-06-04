@@ -36,3 +36,5 @@ class FreeListings extends Component {
         )
     }
 }
+
+export default FreeListings
