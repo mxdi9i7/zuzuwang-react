@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import './index.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import createHistory from 'history/createBrowserHistory'
 
 import FreeListings from './components/FreeListings'
 import ProListings from './components/ProListings'
 // import UserProfile from './components/UserProfile'
 import Home from './components/Home'
-import Nav from './components/Nav'
 import Signin from './components/auth/Signin'
+
 const App = () => {
     return (
                 <Router history={createHistory}>

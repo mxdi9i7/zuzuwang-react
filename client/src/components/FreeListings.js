@@ -30,7 +30,7 @@ class FreeListings extends Component {
                 Free Listings
                 <ul className="collection">
                     { listings.map((listing, index)=> (
-                        <li className="collection-item" key={index}>{ listing.address }, { listing.price}</li>
+                        <li className="collection-item" key={index}><Link to="">{ listing.address }, { listing.price}</Link></li>
                     ))}
                 </ul>
             </div>

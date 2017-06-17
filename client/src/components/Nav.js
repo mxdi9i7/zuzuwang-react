@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import '../App.css';
 class Nav extends Component {
 
@@ -14,16 +14,16 @@ class Nav extends Component {
                     <li><Link to="/free">免费信息</Link></li>
                     <li><Link to="/pro">付费信息</Link></li>
                     <li><Link to={{ pathname: '/user/' + 123}} >我的主页</Link></li>
-                    <li><button className="btn">注销</button></li>
-                    <li><button className="btn" >登录</button></li>    
+                    <li><Link className="btn" to="/signout">注销</Link></li>
+                    <li><Link className="btn" to="/signin">登录</Link></li>    
                 </ul>
                 <ul className="side-nav" id="mobile-demo">
                     <li><Link to='/'>首页</Link></li>
                     <li><Link to="/free">免费信息</Link></li>
                     <li><Link to="/pro">付费信息</Link></li>
                     <li><Link to={{ pathname: '/user/' + 123}} >我的主页</Link></li>
-                    <li><button className="btn">注销</button></li>
-                    <li><button className="btn">登录</button></li>    
+                    <li><Link className="btn" to="/signout">注销</Link></li>
+                    <li><Link className="btn" to="/signin">登录</Link></li>    
                 </ul>
                 </div>
             </nav>

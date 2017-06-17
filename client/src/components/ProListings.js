@@ -30,7 +30,7 @@ class ProListings extends Component {
                 Pro Listings
                 <ul className="collection">
                     { listings.map((listing, index)=> (
-                        <li className="collection-item" key={index}>{ listing.address }, { listing.price}</li>
+                        <li className="collection-item" key={index}><Link>{ listing.address }, { listing.price}</Link></li>
                     ))}
                 </ul>
             </div>
