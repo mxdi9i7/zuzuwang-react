@@ -3,11 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "auth0-js": "^8.7.0",
     "axios": "^0.16.2",
+    "firebaseui": "^2.0.0",
+    "history": "^4.6.1",
+    "jwt-decode": "^2.2.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
-    "react-router-dom": "^4.1.1"
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "react-scripts": "1.0.7"

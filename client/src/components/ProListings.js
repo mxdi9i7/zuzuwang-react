@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router';
+import { Link } from 'react-router-dom'
 import Nav from './Nav';
 import {getProListingData} from './utils/ListingsApi'
 
@@ -27,6 +27,7 @@ class ProListings extends Component {
         return (
             <div>
                 <Nav />
+                Pro Listings
                 <ul className="collection">
                     { listings.map((listing, index)=> (
                         <li className="collection-item" key={index}>{ listing.address }, { listing.price}</li>

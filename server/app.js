@@ -31,19 +31,6 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/api', apiRoute);
 
-const authCheck = jwt({
-  secret: jwks.expressJwtSecret({
-    cache: true,
-    rateLimit: true,
-    jwksRequestsPerMinute: 5,
-    jwksUri: "https://mxdi9i7.auth0.com/.well-known/jwks.json"
-  }),
-  // Identifier we set when we created the API
-  audience: 'https://mxdi9i7.auth0.com/userinfo',
-  issuer: 'https://mxdi9i7.auth0.com/',
-  algorithems: ['RS256']
-})
-
 
 
 

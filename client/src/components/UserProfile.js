@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Nav from './Nav';
 import {getFreeListingData} from './utils/ListingsApi'
 
-class FreeListings extends Component {
+class UserProfile extends Component {
 
     constructor() {
         super()
@@ -27,7 +27,7 @@ class FreeListings extends Component {
         return (
             <div>
                 <Nav />
-                Free Listings
+                
                 <ul className="collection">
                     { listings.map((listing, index)=> (
                         <li className="collection-item" key={index}>{ listing.address }, { listing.price}</li>
@@ -38,4 +38,4 @@ class FreeListings extends Component {
     }
 }
 
-export default FreeListings
+export default ProListings
