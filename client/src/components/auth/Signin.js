@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {reduxForm, Field} from 'redux-form'
-import * as actions from '../../actions'
+import * as actions from '../../actions'；
 
 import Nav from '../Nav';
 
@@ -25,9 +25,9 @@ class Signin extends Component {
                 <Nav />
                 <div className="signin-container">
                     <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
-                            <label>Email:</label>
+                            <label>Email: </label>
                             <Field name="email" component={renderInput} type="email"/>
-                            <label>Password:</label>
+                            <label>Password: </label>
                             <Field name="password" component={renderInput} type="password"/>
                             <button action="submit">Sign in</button>
                     </form>
