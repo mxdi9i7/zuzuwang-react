@@ -1,11 +1,7 @@
 import React, {Component} from 'react'
 import {reduxForm, Field} from 'redux-form'
-<<<<<<< HEAD
 import { connect } from 'react-redux'
 import * as actions from '../../actions'
-=======
-import * as actions from '../../actions'；
->>>>>>> c71f375584ea9480133c27216d7f920516d11037
 
 import Nav from '../Nav';
 
