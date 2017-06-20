@@ -6,12 +6,17 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongojs = require('mongojs');
 var cors = require('cors');
+var mongoose = require('mongoose');
+
+//DB setup
+mongoose.connect('mongodb://localhost:27017/zuzuwang');
 
 var jwt = require('express-jwt');
 var jwks = require('jwks-rsa');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var apiRoute = require('./routes/api');
+var authRoute = require('./routes/auth');
 var app = express();
 
 // view engine setup
@@ -30,6 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/api', apiRoute);
+app.use('/auth', authRoute);
 
 
 

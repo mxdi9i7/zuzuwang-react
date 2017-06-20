@@ -1,15 +1,12 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api'
+const Auth_URL = 'http://localhost:3000/auth'
 
-export function signinUser({
-    email,
-    password,
-}) {
+export function signinUser({email, password}) {
     
     return function(dispatch) {
         //submit email and pass to the server
-        axios.post(`${API_URL}/signin`, {email, password})
+        axios.post(`${Auth_URL}/signin`, {email, password})
     }
     //if req is true
     // update state to indicate user is authenticated

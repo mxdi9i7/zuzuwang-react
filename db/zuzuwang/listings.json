@@ -1,0 +1,5 @@
+{"_id":{"$oid":"5933591e468c7005383e8997"},"address":"5819 183rd street","city":"freshmeadows","state":"NY","price":"2200","isPro":true}
+{"_id":{"$oid":"5933594c468c7005383e8998"},"address":"13685 Roosevelt Ave","city":"freshmeadows","state":"NY","price":"2200","isPro":true}
+{"_id":{"$oid":"593359ab468c7005383e8999"},"address":"5819 183rd street","city":"freshmeadows","state":"NY","price":"2200","isPro":false}
+{"_id":{"$oid":"5943fb83d5248324e879158b"},"address":"5819 183rd street","city":"freshmeadows","state":"NY","price":"2200","isPro":false}
+{"_id":{"$oid":"5943fb85d5248324e879158c"},"address":"5819 183rd street","city":"freshmeadows","state":"NY","price":"2200","isPro":false}
