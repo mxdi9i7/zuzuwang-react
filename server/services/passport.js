@@ -7,9 +7,22 @@ const LocalStrategy = require('passport-local')
 
 //local strategy
 const localOptions = { usernameField: 'email'}
-const localLogin = new LocalStrategy(localOptions, function(email, passport, done) {
+const localLogin = new LocalStrategy(localOptions, function(email, password, done) {
 	//verify this username and passpword call done with the user if it is the correct username and password
-	
+	User.findOne({email: email}, function(err, user) {
+		if (err) {
+			return done(err)
+		}
+		if (!user) {
+			return done(null, false)
+		}
+		// compare passwords
+		user.comparePass(password, function(err, isMatch) {
+			if (err) { return done(err)}
+			if (!isMatch) { return done(null, false)}
+			return done(null, user)
+		})
+	})
 })
 
 
@@ -39,3 +52,4 @@ const jwtLogin = new JwtStrategy(jwtOptions, function(payload, done) {
 	//otherwise, call done without a user object
 })
 passport.use(jwtLogin)
+passport.use(localLogin)

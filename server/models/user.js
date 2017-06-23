@@ -20,7 +20,7 @@ userSchema.pre('save', function(next) {
 		bcrypt.hash(user.password, salt,null, function(err, hash) {
 			if (err) {
 				return next(err);
-			
+
 			}
 		//override plain text password with encrypted password
 				user.password = hash;
@@ -28,6 +28,15 @@ userSchema.pre('save', function(next) {
 		})
 	})
 })
+
+userSchema.methods.comparePass = function(candidatePassword, callback) {
+	bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
+		if (err) {
+			return callback(err)
+		}
+		callback(null, isMatch)
+	})
+}
 
 //Create the model class
 const ModelClass = mongoose.model('users', userSchema)
