@@ -8,6 +8,7 @@ var mongojs = require('mongojs');
 var cors = require('cors');
 var mongoose = require('mongoose');
 
+
 //DB setup
 mongoose.connect('mongodb://localhost:27017/zuzuwang');
 
@@ -30,6 +31,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(cors())
+app.options('*', cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);

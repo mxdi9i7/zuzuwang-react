@@ -15,7 +15,8 @@ class Nav extends Component {
                     <li><Link to="/pro">付费信息</Link></li>
                     <li><Link to={{ pathname: '/user/' + 123}} >我的主页</Link></li>
                     <li><Link className="btn" to="/signout">注销</Link></li>
-                    <li><Link className="btn" to="/signin">登录</Link></li>    
+                    <li><Link className="btn" to="/signin">登录</Link></li> 
+                    <li><Link className="btn" to="/signup">注册</Link></li>   
                 </ul>
                 <ul className="side-nav" id="mobile-demo">
                     <li><Link to='/'>首页</Link></li>

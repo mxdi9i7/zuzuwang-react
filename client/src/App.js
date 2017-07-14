@@ -8,8 +8,8 @@ import FreeListings from './components/FreeListings'
 import ProListings from './components/ProListings'
 // import UserProfile from './components/UserProfile'
 import Home from './components/Home'
-import Signin from './components/auth/Signin'
-
+import SigninPage from './components/auth/Signin'
+import SignupPage from './components/auth/Signup'
 const App = () => {
     return (
                 <Router history={createHistory}>
@@ -18,7 +18,8 @@ const App = () => {
                         <Route path="/free" component={FreeListings} />
                         {/*<Route path="/users" component={UserProfile} />*/}
                         <Route path="/pro" component={ProListings} />
-                        <Route path="/signin" component={Signin} />
+                        <Route path="/signin" component={SigninPage} />
+                        <Route path="/signup" component={SignupPage} />
                     </div>
                 </Router>
    )   

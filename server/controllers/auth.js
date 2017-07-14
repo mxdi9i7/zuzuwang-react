@@ -9,7 +9,10 @@ function tokenForUser(user) {
 exports.signin = function(req, res, next) {
 	//use already had their email and password auth'd
 	//we just need to give them a token
+	res.header("Access-Control-Allow-Origin", "*");
+  	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	res.send({token: tokenForUser(req.user)})
+	next();
 }
 exports.signup = function(req, res, next) {
 	const email = req.body.email;
@@ -34,7 +37,10 @@ exports.signup = function(req, res, next) {
 					return next(err)
 				}
 			}).then(()=> {
+				res.header("Access-Control-Allow-Origin", "*");
+			  	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 				res.json({token: tokenForUser(newUser)})
+				next();
 			})
 			
 	})
